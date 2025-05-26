@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Retrieval-Augmented Generation for LLM Customization{% endblock %}
+
+{% block head_extra %}
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+{% endblock %}
+
+{% block js_files %}
+    <script src="js/tableByYear.js"></script>
+    <script src="js/tableByRepo.js"></script>
+{% endblock %}
+
+{% block content %}
+    <header class="page-header">
+        <div class="container">
+            <div class="header-logo-container">
+                <img src="img/bear.png" alt="RAG for LLM Customization" class="header-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+
+        <a href="https://swesmith.com/">
+            <div class="announcement-container">
+                <p>We survey, evaluate, and open source SOTA Retrieval-Augmented Generation algorithms for customizing LLMs.</p>
+            </div>
+        </a>
+
+        <div class="content-section" id="leaderboard">
+            <div class="leaderboard-tabs">
+                <div class="leaderboard-tab-list">
+                    <button class="tablinks" data-leaderboard="Lite">Lite</button>
+                    <button class="tablinks" data-leaderboard="Verified">Verified</button>
+                    <button class="tablinks" data-leaderboard="Test">Full</button>
+                    <button class="tablinks" data-leaderboard="Multimodal">Multimodal</button>
+                </div>
+            </div>
+
+            {% include "_leaderboard_table.html" %}
+            
+            <div class="view-details-button" style="text-align: center; margin-top: 20px;">
+                <a href="viewer.html" class="btn btn-primary">Analyze Results in Detail</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
+
+{% block scripts_extra %}
+{% endblock %}
