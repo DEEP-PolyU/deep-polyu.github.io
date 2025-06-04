@@ -26,7 +26,7 @@
 <body>
     <div class="sidebar-overlay"></div>
 <header class="mobile-header">
-    <a href="/" class="mobile-logo"><img src="img/swe-llama.svg" alt="SWE-bench logo" class="sidebar-logo-icon">SWE-bench</a>
+    <a href="/" class="mobile-logo"><img src="img/deep.jpg" alt="DEEP lab logo" class="sidebar-logo-icon">DEEP lab</a>
     <button class="sidebar-opener" aria-label="Open menu">
         <i class="fas fa-bars"></i>
     </button>
@@ -34,7 +34,7 @@
 
 <aside class="sidebar">
     <div class="sidebar-header">
-         <a href="/" class="sidebar-logo">DEEP Lab</a>
+         <a href="/" class="sidebar-logo">Reasoning with RAG</a>
          <button class="mobile-nav-toggle" aria-label="Close menu">
              <i class="fas fa-times"></i>
          </button>
@@ -43,10 +43,14 @@
         <ul>
             <li><a href="index.html" class="nav-link" data-page="index">Leaderboards</a></li>
             <li><a href="https://github.com/DEEP-PolyU/Awesome-GraphRAG" class="nav-link" data-page="verified">Survey <i class="fas fa-external-link-alt"></i></a></li>
-            <li><a href="https://github.com/chensyCN/Agentic-RAG" class="nav-link" data-page="verified">Graph RAG bench <i class="fas fa-external-link-alt"></i></a></li>
+            <li class="nav-section-title">Benchmarks</li>
+            <li><a href="graphragbench.html" class="nav-link" data-page="original">GraphRAG-Bench</a></li>
+            <li><a href="clrbench.html" class="nav-link" data-page="original">CLR-Bench</a></li>
+            <li class="nav-section-title">Packages</li>
             <li><a href="https://github.com/chensyCN/Agentic-RAG" class="nav-link" data-page="verified">Agentic RAG <i class="fas fa-external-link-alt"></i></a></li>
+            <li class="nav-section-title">About</li>
             <li><a href="https://web.comp.polyu.edu.hk/xiaohuang/deeplab.html" class="nav-link" data-page="verified">Contact <i class="fas fa-external-link-alt"></i></a></li>
-            <li class="nav-section-title">RAG Models</li>
+
 
         </ul>
     </nav>
@@ -66,26 +70,24 @@
     <header class="page-header">
         <div class="container">
             <div class="header-logo-container">
-                <img src="img/bear.png" alt="RAG for LLM Customization" class="header-logo">
+                <img src="img/bear.png" alt="RAG for LLM Customization and Reasoning" class="header-logo">
             </div>
         </div>
     </header>
 
     <section class="container">
 
-        <a href="https://swesmith.com/">
             <div class="announcement-container">
-                <p>We survey, evaluate, and open source SOTA Retrieval-Augmented Generation algorithms for customizing LLMs.</p>
+                <p>We survey, evaluate, and open source SOTA Retrieval-Augmented Generation (RAG) algorithms for LLM customization and reasoning. We offer a comprehensive evaluation on each component of GraphRAG, including graph construction (time), knowledge retrieval (time), answer generation (accuracy), and rationale generation (reasoning). We aim to provide unprecedented insights into how graph-structured knowledge enhances LLMs' reasoning capabilities compared to traditional RAG approaches.</p>
             </div>
-        </a>
 
         <div class="content-section" id="leaderboard">
             <div class="leaderboard-tabs">
                 <div class="leaderboard-tab-list">
-                    <button class="tablinks" data-leaderboard="Lite">Lite</button>
-                    <button class="tablinks" data-leaderboard="Verified">Verified</button>
-                    <button class="tablinks" data-leaderboard="Test">Full</button>
-                    <button class="tablinks" data-leaderboard="Multimodal">Multimodal</button>
+                    <button class="tablinks" data-leaderboard="Lite">Accuracy</button>
+                    <button class="tablinks" data-leaderboard="Verified">Reasoning</button>
+                    <button class="tablinks" data-leaderboard="Test">Time</button>
+                    <button class="tablinks" data-leaderboard="Multimodal">Without RAG</button>
                 </div>
             </div>
 
@@ -96,13 +98,10 @@
 <div class="mb-3 d-flex justify-content-between align-items-center" style="gap:0.5rem;">
     <div class="filter-buttons" style="flex-shrink: 0;">
         <label class="btn btn-sm btn-outline-secondary filter-toggle">
-            <input type="checkbox" class="filter-checkbox" data-filter="os_model" autocomplete="off"> Open Weight Model
+            <input type="checkbox" class="filter-checkbox" data-filter="os_model" autocomplete="off"> Graph RAG Model
         </label>
         <label class="btn btn-sm btn-outline-secondary filter-toggle">
-            <input type="checkbox" class="filter-checkbox" data-filter="os_system" autocomplete="off"> Open Source System
-        </label>
-        <label class="btn btn-sm btn-outline-secondary filter-toggle" title="The agent run was performed by or directly verified by the SWE-bench team">
-            <input type="checkbox" class="filter-checkbox" data-filter="checked" autocomplete="off"> Checked
+            <input type="checkbox" class="filter-checkbox" data-filter="os_system" autocomplete="off"> Traditional RAG Model
         </label>
     </div>
     <form id="tag-multiselect-form" style="flex: 1; min-width: 200px; display: flex; justify-content: flex-end;">
@@ -355,7 +354,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent 1.0 (Claude 3.7 Sonnet)</span>
                         </div>
@@ -389,7 +387,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -431,7 +428,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + CodeAct v2.1 (claude-3-5-sonnet-20241022)</span>
                         </div>
@@ -469,7 +465,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -511,7 +506,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Honeycomb</span>
                         </div>
@@ -549,7 +543,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -591,7 +584,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Factory Code Droid</span>
                         </div>
@@ -629,7 +621,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -671,7 +662,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3.5 Sonnet</span>
                         </div>
@@ -709,7 +699,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">AppMap Navie + GPT 4o (2024-05-13)</span>
                         </div>
@@ -747,7 +736,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -789,7 +777,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4 (1106)</span>
                         </div>
@@ -829,7 +816,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4o (2024-05-13)</span>
                         </div>
@@ -869,7 +855,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3 Opus</span>
                         </div>
@@ -907,7 +892,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 3 Opus</span>
                         </div>
@@ -947,7 +931,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 2</span>
                         </div>
@@ -985,7 +968,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + GPT 4 (1106)</span>
                         </div>
@@ -1023,7 +1005,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 13B</span>
                         </div>
@@ -1061,7 +1042,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 7B</span>
                         </div>
@@ -1099,7 +1079,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + ChatGPT 3.5</span>
                         </div>
@@ -1163,7 +1142,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Nemotron-CORTEXA</span>
                         </div>
@@ -1202,7 +1180,6 @@
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
                                 <span>🆕</span>
-                                
                                 
                             </div>
                             <span class="model-name font-mono fw-medium">Aime-coder v1 + Anthopic Claude 3.7 Sonnet</span>
@@ -1243,7 +1220,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands</span>
                         </div>
@@ -1281,7 +1257,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1323,7 +1298,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Amazon Q Developer Agent (v20250405-dev)</span>
                         </div>
@@ -1361,7 +1335,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1403,7 +1376,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">PatchPilot-v1.1</span>
                         </div>
@@ -1439,7 +1411,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1481,7 +1452,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Tools + Claude 3.7 Sonnet (2025-02-24)</span>
                         </div>
@@ -1521,7 +1491,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Blackbox AI Agent</span>
                         </div>
@@ -1555,7 +1524,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1597,7 +1565,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3.7 Sonnet w/ Review Heavy</span>
                         </div>
@@ -1637,7 +1604,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">CodeStory Midwit Agent + swe-search</span>
                         </div>
@@ -1673,7 +1639,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + 4x Scaled (2024-02-03)</span>
                         </div>
@@ -1711,7 +1676,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1753,7 +1717,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Nemotron-CORTEXA</span>
                         </div>
@@ -1791,7 +1754,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1833,7 +1795,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Emergent E1 (v2024-12-23)</span>
                         </div>
@@ -1871,7 +1832,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1913,7 +1873,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">EPAM AI/Run Developer Agent v20241212 + Anthopic Claude 3.5 Sonnet</span>
                         </div>
@@ -1951,7 +1910,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -1993,7 +1951,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">devlo</span>
                         </div>
@@ -2031,7 +1988,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2073,7 +2029,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + CodeAct v2.1 (claude-3-5-sonnet-20241022)</span>
                         </div>
@@ -2111,7 +2066,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2153,7 +2107,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Engine Labs (2024-11-25)</span>
                         </div>
@@ -2191,7 +2144,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2233,7 +2185,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless-1.5 + Claude-3.5 Sonnet (20241022)</span>
                         </div>
@@ -2271,7 +2222,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2313,7 +2263,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Bytedance MarsCode Agent</span>
                         </div>
@@ -2351,7 +2300,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2393,7 +2341,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Tools + Claude 3.5 Sonnet (2024-10-22)</span>
                         </div>
@@ -2433,7 +2380,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Composio SWE-Kit (2024-10-25)</span>
                         </div>
@@ -2473,7 +2419,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">AppMap Navie v2</span>
                         </div>
@@ -2513,7 +2458,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + DevStral Small 2505</span>
                         </div>
@@ -2555,7 +2499,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Emergent E1 (v2024-10-12)</span>
                         </div>
@@ -2593,7 +2536,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2635,7 +2577,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Solver (2024-09-12)</span>
                         </div>
@@ -2673,7 +2614,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2715,7 +2655,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">CodeShellAgent + Gemini 2.0 Flash (Experimental)</span>
                         </div>
@@ -2753,7 +2692,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2795,7 +2733,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless Lite + O3 Mini (20250214)</span>
                         </div>
@@ -2835,7 +2772,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">ugaiforge</span>
                         </div>
@@ -2867,7 +2803,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2909,7 +2844,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-RL (Llama3-SWE-RL-70B + Agentless Mini) (20250226)</span>
                         </div>
@@ -2947,7 +2881,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -2989,7 +2922,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Tools + Claude 3.5 Haiku</span>
                         </div>
@@ -3027,7 +2959,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3069,7 +3000,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Composio SWEkit + Claude 3.5 Sonnet (2024-10-16)</span>
                         </div>
@@ -3109,7 +3039,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + SWE-agent-LM-32B</span>
                         </div>
@@ -3147,7 +3076,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3189,7 +3117,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Amazon Q Developer Agent (v20240719-dev)</span>
                         </div>
@@ -3227,7 +3154,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3269,7 +3195,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">AutoCodeRover (v20240620) + GPT 4o (2024-05-13)</span>
                         </div>
@@ -3307,7 +3232,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3349,7 +3273,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3.5 Sonnet</span>
                         </div>
@@ -3389,7 +3312,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-Fixer (Qwen2.5-7b retriever + Qwen2.5-72b editor)</span>
                         </div>
@@ -3429,7 +3351,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">MASAI + GPT 4o (2024-06-12)</span>
                         </div>
@@ -3463,7 +3384,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3505,7 +3425,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">nFactorial (2024-10-07)</span>
                         </div>
@@ -3543,7 +3462,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3585,7 +3503,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Lingma Agent + Lingma SWE-GPT 72b (v0925)</span>
                         </div>
@@ -3623,7 +3540,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3665,7 +3581,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">AppMap Navie + GPT 4o (2024-05-13)</span>
                         </div>
@@ -3703,7 +3618,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3745,7 +3659,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Amazon Q Developer Agent (v20240430-dev)</span>
                         </div>
@@ -3783,7 +3696,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -3825,7 +3737,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">EPAM AI/Run Developer Agent + GPT4o</span>
                         </div>
@@ -3865,7 +3776,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4o (2024-05-13)</span>
                         </div>
@@ -3905,7 +3815,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4 (1106)</span>
                         </div>
@@ -3945,7 +3854,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3 Opus</span>
                         </div>
@@ -3983,7 +3891,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4025,7 +3932,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Lingma Agent + Lingma SWE-GPT 7b (v0918)</span>
                         </div>
@@ -4065,7 +3971,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 3 Opus</span>
                         </div>
@@ -4105,7 +4010,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 2</span>
                         </div>
@@ -4143,7 +4047,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + GPT 4 (1106)</span>
                         </div>
@@ -4181,7 +4084,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 7B</span>
                         </div>
@@ -4219,7 +4121,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 13B</span>
                         </div>
@@ -4257,7 +4158,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + ChatGPT 3.5</span>
                         </div>
@@ -4321,7 +4221,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Isoform</span>
                         </div>
@@ -4361,7 +4260,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Blackbox AI Agent</span>
                         </div>
@@ -4395,7 +4293,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4437,7 +4334,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Globant Code Fixer Agent</span>
                         </div>
@@ -4477,7 +4373,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3.7 Sonnet</span>
                         </div>
@@ -4515,7 +4410,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4557,7 +4451,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">DARS Agent</span>
                         </div>
@@ -4595,7 +4488,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4637,7 +4529,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">CodeStory Aide + Mixed Models</span>
                         </div>
@@ -4672,7 +4563,6 @@
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
                                 <span>🆕</span>
-                                
                                 
                             </div>
                             <span class="model-name font-mono fw-medium">Lingxi</span>
@@ -4713,7 +4603,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + CodeAct v2.1 (claude-3-5-sonnet-20241022)</span>
                         </div>
@@ -4753,7 +4642,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Codart AI</span>
                         </div>
@@ -4787,7 +4675,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4825,7 +4712,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4867,7 +4753,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Composio SWE-Kit (2024-10-30)</span>
                         </div>
@@ -4905,7 +4790,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -4947,7 +4831,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">OpenCSG Starship Agentic Coder + GPT 4 (0806)</span>
                         </div>
@@ -4985,7 +4868,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5027,7 +4909,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Moatless Tools + Claude 3.5 Sonnet (20241022)</span>
                         </div>
@@ -5063,7 +4944,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Moatless Tools + Claude 3.5 Sonnet (20241022)</span>
                         </div>
@@ -5097,7 +4977,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5139,7 +5018,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">AbanteAI MentatBot + GPT 4o (2024-05-13)</span>
                         </div>
@@ -5173,7 +5051,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5215,7 +5092,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">AppMap Navie v2</span>
                         </div>
@@ -5253,7 +5129,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5295,7 +5170,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Gru(2024-08-11)</span>
                         </div>
@@ -5335,7 +5209,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Isoform</span>
                         </div>
@@ -5369,7 +5242,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5411,7 +5283,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Bytedance MarsCode Agent + GPT 4o (2024-05-13)</span>
                         </div>
@@ -5449,7 +5320,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5491,7 +5361,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless Lite + O3 Mini (20250214)</span>
                         </div>
@@ -5529,7 +5398,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5571,7 +5439,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Factory Code Droid</span>
                         </div>
@@ -5609,7 +5476,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5651,7 +5517,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">AutoCodeRover (v20240620) + GPT 4o (2024-05-13)</span>
                         </div>
@@ -5691,7 +5556,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Aegis - o3-mini_1.0</span>
                         </div>
@@ -5725,7 +5589,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5763,7 +5626,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Kortix AI (claude-3-5-sonnet-20241022)</span>
                         </div>
@@ -5801,7 +5663,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5843,7 +5704,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless + RepoGraph + GPT-4o</span>
                         </div>
@@ -5881,7 +5741,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5923,7 +5782,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">reproducedRG</span>
                         </div>
@@ -5955,7 +5813,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -5993,7 +5850,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">MASAI + GPT 4o (2024-05-13)</span>
                         </div>
@@ -6027,7 +5883,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -6069,7 +5924,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Moatless Tools + Claude 3.5 Sonnet</span>
                         </div>
@@ -6105,7 +5959,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">OpenHands + CodeAct v1.8</span>
                         </div>
@@ -6143,7 +5996,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -6185,7 +6037,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Aider + GPT 4o &amp; Claude 3 Opus</span>
                         </div>
@@ -6225,7 +6076,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">HyperAgent</span>
                         </div>
@@ -6261,7 +6111,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-Fixer (Qwen2.5-7b retriever + Qwen2.5-72b editor)</span>
                         </div>
@@ -6301,7 +6150,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Moatless Tools + GPT 4o (2024-05-13)</span>
                         </div>
@@ -6335,7 +6183,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -6377,7 +6224,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">OpenCSG StarShip CodeGenAgent + GPT 4 (0613)</span>
                         </div>
@@ -6411,7 +6257,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -6453,7 +6298,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3.5 Sonnet</span>
                         </div>
@@ -6493,7 +6337,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">AppMap Navie + GPT 4o (2024-05-13)</span>
                         </div>
@@ -6533,7 +6376,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">Bytedance AutoSE (based on SWE-Agent) + GPT4/GPT4o Mixed (20240828)</span>
                         </div>
@@ -6569,7 +6411,6 @@
                     <td>
                         <div class="flex items-center gap-1">
                             <div class="model-badges">
-                                
                                 
                                 
                             </div>
@@ -6611,7 +6452,6 @@
                             <div class="model-badges">
                                 
                                 
-                                
                             </div>
                             <span class="model-name font-mono fw-medium">AutoCodeRover (v20240408) + GPT 4 (0125)</span>
                         </div>
@@ -6651,7 +6491,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4o (2024-05-13)</span>
                         </div>
@@ -6691,7 +6530,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4 (1106)</span>
                         </div>
@@ -6731,7 +6569,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude 3 Opus</span>
                         </div>
@@ -6771,7 +6608,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 3 Opus</span>
                         </div>
@@ -6811,7 +6647,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 2</span>
                         </div>
@@ -6851,7 +6686,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + GPT 4 (1106)</span>
                         </div>
@@ -6891,7 +6725,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 7B</span>
                         </div>
@@ -6931,7 +6764,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + SWE-Llama 13B</span>
                         </div>
@@ -6971,7 +6803,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + ChatGPT 3.5</span>
                         </div>
@@ -7011,7 +6842,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Moatless Tools + Deepseek V3</span>
                         </div>
@@ -7073,7 +6903,6 @@
                             <div class="model-badges">
                                 <span>🆕</span>
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Zencoder (2025-04-01)</span>
                         </div>
@@ -7113,7 +6942,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Globant Code Fixer Agent</span>
                         </div>
@@ -7153,7 +6981,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Zencoder (2025-03-10)</span>
                         </div>
@@ -7193,7 +7020,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless Lite + Claude-3.5 Sonnet</span>
                         </div>
@@ -7233,7 +7059,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent Multimodal + GPT 4o (2024-08-06)</span>
                         </div>
@@ -7273,7 +7098,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + Claude Sonnet 3.5</span>
                         </div>
@@ -7313,7 +7137,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent JavaScript + Claude Sonnet 3.5</span>
                         </div>
@@ -7353,7 +7176,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent + GPT 4o (2024-08-06)</span>
                         </div>
@@ -7393,7 +7215,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent Multimodal + Claude 3.5 Sonnet</span>
                         </div>
@@ -7433,7 +7254,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">SWE-agent JavaScript + GPT 4o (2024-08-06)</span>
                         </div>
@@ -7473,7 +7293,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless + Claude 3.5 Sonnet</span>
                         </div>
@@ -7513,7 +7332,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + GPT 4o (2024-08-06)</span>
                         </div>
@@ -7553,7 +7371,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">RAG + Claude 3.5 Sonnet</span>
                         </div>
@@ -7593,7 +7410,6 @@
                             <div class="model-badges">
                                 
                                 
-                                <span title="The agent run was performed by or directly verified by the SWE-bench team">✅</span>
                             </div>
                             <span class="model-name font-mono fw-medium">Agentless + GPT 4o (2024-08-06)</span>
                         </div>
@@ -7635,20 +7451,33 @@
 
 <div class="leaderboard-notes">
     <p>
-        SWE-bench <b>Lite</b> is a subset curated for less costly evaluation [<a href="lite.html">Post</a>].<br>
-        SWE-bench <b>Verified</b> is a human-filtered subset [<a href="https://openai.com/index/introducing-swe-bench-verified/">Post</a>].<br>
-        SWE-bench <b>Multimodal</b> features issues with visual elements [<a href="multimodal.html">Post</a>].
+       GraphRAG-Bench: Challenging Domain-Specific Reasoning for Evaluating Graph Retrieval-Augmented Generation.<br>
+        GraphRAG-Bench contains 1,018 college-level question spans 16 disciplines, e.g., computer vision, computer networks, human-computer interaction, AI ethics, etc., featuring the ability of conceptual understanding, e.g., "Given [theorem] A and B, prove [conclusion] C", complex algorithmic programming, e.g., coding with interlinked function calls, and mathematical computation, e.g., "Given [Input], [Conv1], [MaxPool], [FC], calculate the output volume dimensions."<br>
+        GraphRAG-Bench contains five types of diverse questions to thoroughly evaluate different aspects of reasoning, including multiple-choice, multi-select, true-or-false, fill-in-blank, and open-ended.
     </p>
-    <p>Each entry reports the <b>% Resolved</b> metric, the percentage of instances solved (out of 2294 Full, 500 Verified, 300 Lite, 517 Multimodal).</p>
+
+
 </div>
             
             <div class="view-details-button" style="text-align: center; margin-top: 20px;">
-                <a href="viewer.html" class="btn btn-primary">Analyze Results in Detail</a>
+                <a href="https://arxiv.org/pdf/2506.02404" class="btn btn-primary">Analyze Results in Detail</a>
             </div>
         </div>
     </section>
 
-
+    <!-- Citation Section -->
+    <section id="citation" class="content-box">
+        <p>If you find this website helpful, please cite our paper:</p>
+        <div class="citation-container" id="lite-citation-bibtex">
+            <button class="copy-btn" aria-label="Copy citation">Copy</button>
+            <pre>@article{zhang2025survey,
+  title={A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models},
+  author={Zhang, Qinggang and Chen, Shengyuan and Bei, Yuanchen and Yuan, Zheng and Zhou, Huachi and Hong, Zijin and Dong, Junnan and Chen, Hao and Chang, Yi and Huang, Xiao},
+  journal={arXiv preprint arXiv:2501.13958},
+  year={2025}
+}</pre>
+        </div>
+    </section>
 
 
 
