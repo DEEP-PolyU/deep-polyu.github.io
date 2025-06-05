@@ -8,8 +8,7 @@ const statusToNaturalLanguage = {
     'no_apply': 'Patch Apply Failed',
     'applied': 'Patch Applied',
     'test_errored': 'Test Errored',
-    'test_timeout': 'Test Timed Out',
-    'resolved': 'Resolved'
+    'test_timeout': 'Test Timed Out'
 }
 
 function createTableHeader(keys, table) {
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPage === 'index' && window.location.hash) {
             const currentHash = window.location.hash.substring(1);
             
-            if (linkPage === currentHash && !['lite', 'verified', 'test', 'multimodal'].includes(currentHash.toLowerCase())) {
+            if (linkPage === currentHash && !['Accuracy', 'Reasoning'].includes(currentHash.toLowerCase())) {
                 link.classList.add('active');
             }
         }
@@ -114,12 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const hash = window.location.hash.slice(1).toLowerCase();
-    const validTabs = ['lite', 'verified', 'test', 'multimodal'];
+    const validTabs = ['Accuracy', 'Reasoning'];
     
     if (hash && validTabs.includes(hash)) {
         const tabName = hash.charAt(0).toUpperCase() + hash.slice(1);
         openLeaderboard(tabName);
     } else {
-        openLeaderboard('Lite');
+        openLeaderboard('Accuracy');
     }
 });
