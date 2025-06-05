@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPage === 'index' && window.location.hash) {
             const currentHash = window.location.hash.substring(1);
             
-            if (linkPage === currentHash && !['Accuracy', 'Reasoning'].includes(currentHash.toLowerCase())) {
+            if (linkPage === currentHash && !['accuracy', 'reasoning'].includes(currentHash.toLowerCase())) {
                 link.classList.add('active');
             }
         }
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const hash = window.location.hash.slice(1).toLowerCase();
-    const validTabs = ['Accuracy', 'Reasoning'];
+    const validTabs = ['accuracy', 'reasoning'];
     
     if (hash && validTabs.includes(hash)) {
         const tabName = hash.charAt(0).toUpperCase() + hash.slice(1);
