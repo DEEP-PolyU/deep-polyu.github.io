@@ -12,32 +12,6 @@ const statusToNaturalLanguage = {
     'resolved': 'Resolved'
 }
 
-function updateLogViewer(inst_id, split, model) {
-    if (inst_id == 'No Instance Selected') {
-        const logViewer = document.querySelector('#log-viewer');
-        logViewer.innerHTML = 'No instance selected.';
-        return;
-    }
-    const url = `https://raw.githubusercontent.com/swe-bench/experiments/main/evaluation/${split}/${model}/logs/${inst_id}.${model}.eval.log`;
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            const logViewer = document.querySelector('#log-viewer');
-            logViewer.innerHTML = '';
-
-            const inst_p = document.createElement('p');
-            inst_p.textContent = `Instance ID: ${inst_id}`;
-            logViewer.appendChild(inst_p);
-
-            const pre = document.createElement('pre');
-            pre.textContent = data;
-            logViewer.appendChild(pre);
-        })
-        .catch(error => {
-            console.error('Error fetching the JSON data:', error);
-        });
-}
-
 function createTableHeader(keys, table) {
     const headerRowWrapper = document.createElement('thead');
     const headerRow = document.createElement('tr');
@@ -88,31 +62,6 @@ function createTableBody(data, split, model, keys, table) {
             }
         });
     }
-}
-
-function updateMainResults(split, model) {
-    const url = `https://raw.githubusercontent.com/swe-bench/experiments/main/evaluation/${split}/${model}/results/results.json`;
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data && data.resolved) {
-                const resolved = data.resolved.length;
-                const total = 
-                    split === 'lite' ? 300 : 
-                    split === 'verified' ? 500 : 
-                    split === 'multimodal' ? 517 : 2294;
-                const percentResolved = (resolved / total * 100).toFixed(2);
-                const resolvedElement = document.getElementById('selectedResolved');
-                resolvedElement.textContent = percentResolved;
-            } else {
-                console.error('Invalid results data format:', data);
-                document.getElementById('selectedResolved').textContent = 'N/A';
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching the results data:', error);
-            document.getElementById('selectedResolved').textContent = 'Error';
-        });
 }
 
 function openLeaderboard(leaderboardName) {

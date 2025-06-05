@@ -1,5 +1,5 @@
 // Global active filters set
-const activeFilters = new Set(['os_system']);
+const activeFilters = new Set(['graphrag']);
 
 // Table Update Logic
 function updateTable() {
