@@ -37,11 +37,11 @@
     </div>
     <nav class="sidebar-nav">
         <ul>
-            <li><a href="index.html" class="nav-link" data-page="index">Leaderboards</a></li>
             <li><a href="https://github.com/DEEP-PolyU/Awesome-GraphRAG" class="nav-link" data-page="verified">Survey <i class="fas fa-external-link-alt"></i></a></li>
             <li class="nav-section-title">Benchmarks</li>
-            <li><a href="graphragbench.html" class="nav-link" data-page="original">GraphRAG-Bench</a></li>
-            <li><a href="clrbench.html" class="nav-link" data-page="original">CLR-Bench</a></li>
+            <li><a href="index.html" class="nav-link" data-page="index">GraphRAG-Bench</a></li>
+            <li><a href="https://graphrag-bench.github.io" class="nav-link" data-page="verified">GraphRAG-Bench2 <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://clr-bench.github.io" class="nav-link" data-page="verified">CLR-Bench <i class="fas fa-external-link-alt"></i></a></li>
             <li class="nav-section-title">Packages</li>
             <li><a href="https://github.com/chensyCN/Agentic-RAG" class="nav-link" data-page="verified">Agentic RAG <i class="fas fa-external-link-alt"></i></a></li>
             <li class="nav-section-title">About</li>
@@ -72,16 +72,21 @@
     </header>
 
     <section class="container">
+        <div class="announcement-container">
+            <p>We survey, evaluate, and open source SOTA Retrieval-Augmented Generation (RAG) algorithms for LLM customization and reasoning. We offer a comprehensive evaluation on each component of GraphRAG, including graph construction (time), knowledge retrieval (time), answer generation (accuracy), and rationale generation (reasoning). We aim to provide unprecedented insights into how graph-structured knowledge enhances LLMs' reasoning capabilities compared to traditional RAG approaches.</p>
+        </div>
 
-            <div class="announcement-container">
-                <p>We survey, evaluate, and open source SOTA Retrieval-Augmented Generation (RAG) algorithms for LLM customization and reasoning. We offer a comprehensive evaluation on each component of GraphRAG, including graph construction (time), knowledge retrieval (time), answer generation (accuracy), and rationale generation (reasoning). We aim to provide unprecedented insights into how graph-structured knowledge enhances LLMs' reasoning capabilities compared to traditional RAG approaches.</p>
-            </div>
+        <div style="display: flex; align-items: center; flex-direction: column; margin-bottom: 1em;">
+                <img src="img/RAG_pipeline.png" class="img-fluid" style="width: 90%;"/>
+            <p>Read our survey for more introduction to RAG for LLM customization & reasoning.</p>
+        </div>
 
         <div class="content-section" id="leaderboard">
             <div class="leaderboard-tabs">
                 <div class="leaderboard-tab-list">
                     <button class="tablinks" data-leaderboard="Accuracy">Accuracy</button>
                     <button class="tablinks" data-leaderboard="Reasoning">Reasoning</button>
+                    <button class="tablinks" data-leaderboard="WithoutRAG">WithoutRAG</button>
                 </div>
             </div>
 
@@ -120,7 +125,6 @@
             <thead>
                 <tr>
                     <th>Model</th>
-                    <th>Site</th>
                     <th>Average</th>
                     <th>TF</th>
                     <th>MC</th>
@@ -132,6 +136,7 @@
                     <th>Organization</th>
                     <th>Retrieval time</th>
                     <th>Date</th>
+                    <th>Site</th>
                 </tr>
             </thead>
             <tbody>
@@ -148,11 +153,6 @@
                             <span class="model-name font-mono fw-medium">RAPTOR</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/parthsarthi03/raptor" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">73.58</span></td>
                     <td><span class="number fw-medium text-primary">82.28</span></td>
                     <td><span class="number fw-medium text-primary">80.65</span></td>
@@ -164,6 +164,11 @@
                     <td><span class="number fw-medium text-primary">-</span></td>
                     <td><span class="number fw-medium text-primary">0.02s</span></td>
                     <td><span class="label-date text-muted">2025-01-31</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/parthsarthi03/raptor" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -178,11 +183,6 @@
                             <span class="model-name font-mono fw-medium">HippoRAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/markmbain/OSU-NLP-Group-HippoRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">72.64</span></td>
                     <td><span class="number fw-medium text-primary">81.65</span></td>
                     <td><span class="number fw-medium text-primary">80.18</span></td>
@@ -194,6 +194,11 @@
                     <td><span class="number fw-medium text-primary">89.58%</span></td>
                     <td><span class="number fw-medium text-primary">2.44s</span></td>
                     <td><span class="label-date text-muted">2024-12-19</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/markmbain/OSU-NLP-Group-HippoRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -208,11 +213,6 @@
                             <span class="model-name font-mono fw-medium">GraphRAG(Microsoft)</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/microsoft/graphrag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">72.50</span></td>
                     <td><span class="number fw-medium text-primary">80.70</span></td>
                     <td><span class="number fw-medium text-primary">81.57</span></td>
@@ -224,6 +224,11 @@
                     <td><span class="number fw-medium text-primary">72.51%</span></td>
                     <td><span class="number fw-medium text-primary">44.87s</span></td>
                     <td><span class="label-date text-muted">2025-02-19</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/microsoft/graphrag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -238,11 +243,6 @@
                             <span class="model-name font-mono fw-medium">GFM-RAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/RManLuo/gfm-rag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">72.10</span></td>
                     <td><span class="number fw-medium text-primary">82.59</span></td>
                     <td><span class="number fw-medium text-primary">80.65</span></td>
@@ -254,6 +254,11 @@
                     <td><span class="number fw-medium text-primary">89.97%</span></td>
                     <td><span class="number fw-medium text-primary">1.96s</span></td>
                     <td><span class="label-date text-muted">2025-02-03</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/RManLuo/gfm-rag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -268,11 +273,6 @@
                             <span class="model-name font-mono fw-medium">KGP</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/YuWVandy/KG-LLM-MDQA" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">71.86</span></td>
                     <td><span class="number fw-medium text-primary">82.28</span></td>
                     <td><span class="number fw-medium text-primary">79.26</span></td>
@@ -284,6 +284,11 @@
                     <td><span class="number fw-medium text-primary">46.03%</span></td>
                     <td><span class="number fw-medium text-primary">89.38s</span></td>
                     <td><span class="label-date text-muted">2023-12-25</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/YuWVandy/KG-LLM-MDQA" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -298,11 +303,6 @@
                             <span class="model-name font-mono fw-medium">ToG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/GasolSun36/ToG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">71.71</span></td>
                     <td><span class="number fw-medium text-primary">79.75</span></td>
                     <td><span class="number fw-medium text-primary">78.80</span></td>
@@ -314,6 +314,11 @@
                     <td><span class="number fw-medium text-primary">89.95%</span></td>
                     <td><span class="number fw-medium text-primary">70.53s</span></td>
                     <td><span class="label-date text-muted">2024-03-24</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/GasolSun36/ToG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -328,11 +333,6 @@
                             <span class="model-name font-mono fw-medium">LightRAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">71.22</span></td>
                     <td><span class="number fw-medium text-primary">82.59</span></td>
                     <td><span class="number fw-medium text-primary">78.80</span></td>
@@ -344,6 +344,11 @@
                     <td><span class="number fw-medium text-primary">69.71%</span></td>
                     <td><span class="number fw-medium text-primary">13.95s</span></td>
                     <td><span class="label-date text-muted">2025-04-28</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -358,11 +363,6 @@
                             <span class="model-name font-mono fw-medium">G-Retriever</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/XiaoxinHe/G-Retriever" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">69.84</span></td>
                     <td><span class="number fw-medium text-primary">78.80</span></td>
                     <td><span class="number fw-medium text-primary">77.42</span></td>
@@ -374,6 +374,11 @@
                     <td><span class="number fw-medium text-primary">89.95%</span></td>
                     <td><span class="number fw-medium text-primary">23.77s</span></td>
                     <td><span class="label-date text-muted">2024-05-27</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/XiaoxinHe/G-Retriever" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -388,11 +393,6 @@
                             <span class="model-name font-mono fw-medium">DALK</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/David-Li0406/DALK" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">69.30</span></td>
                     <td><span class="number fw-medium text-primary">77.22</span></td>
                     <td><span class="number fw-medium text-primary">78.34</span></td>
@@ -404,6 +404,11 @@
                     <td><span class="number fw-medium text-primary">89.49%</span></td>
                     <td><span class="number fw-medium text-primary">26.80s</span></td>
                     <td><span class="label-date text-muted">2024-10-17</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/David-Li0406/DALK" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr class="no-results">
@@ -422,7 +427,6 @@
             <thead>
                 <tr>
                     <th>Model</th>
-                    <th>Site</th>
                     <th>Average</th>
                     <th>TF</th>
                     <th>MC</th>
@@ -434,6 +438,7 @@
                     <th>Organization</th>
                     <th>Retrieval time</th>
                     <th>Date</th>
+                    <th>Site</th>
                 </tr>
             </thead>
             <tbody>
@@ -450,11 +455,6 @@
                             <span class="model-name font-mono fw-medium">RAPTOR</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/parthsarthi03/raptor" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">45.53</span></td>
                     <td><span class="number fw-medium text-primary">62.90</span></td>
                     <td><span class="number fw-medium text-primary">52.07</span></td>
@@ -466,6 +466,11 @@
                     <td><span class="number fw-medium text-primary">-</span></td>
                     <td><span class="number fw-medium text-primary">0.02s</span></td>
                     <td><span class="label-date text-muted">2025-01-31</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/parthsarthi03/raptor" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -480,11 +485,6 @@
                             <span class="model-name font-mono fw-medium">HippoRAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/markmbain/OSU-NLP-Group-HippoRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">44.55</span></td>
                     <td><span class="number fw-medium text-primary">63.61</span></td>
                     <td><span class="number fw-medium text-primary">52.30</span></td>
@@ -496,6 +496,11 @@
                     <td><span class="number fw-medium text-primary">89.58%</span></td>
                     <td><span class="number fw-medium text-primary">2.44s</span></td>
                     <td><span class="label-date text-muted">2024-12-19</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/markmbain/OSU-NLP-Group-HippoRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -510,11 +515,6 @@
                             <span class="model-name font-mono fw-medium">GraphRAG(Microsoft)</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/microsoft/graphrag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">43.30</span></td>
                     <td><span class="number fw-medium text-primary">60.13</span></td>
                     <td><span class="number fw-medium text-primary">52.42</span></td>
@@ -526,6 +526,11 @@
                     <td><span class="number fw-medium text-primary">72.51%</span></td>
                     <td><span class="number fw-medium text-primary">44.87s</span></td>
                     <td><span class="label-date text-muted">2025-02-19</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/microsoft/graphrag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -540,11 +545,6 @@
                             <span class="model-name font-mono fw-medium">GFM-RAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/RManLuo/gfm-rag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">44.30</span></td>
                     <td><span class="number fw-medium text-primary">63.69</span></td>
                     <td><span class="number fw-medium text-primary">52.07</span></td>
@@ -556,6 +556,11 @@
                     <td><span class="number fw-medium text-primary">89.97%</span></td>
                     <td><span class="number fw-medium text-primary">1.96s</span></td>
                     <td><span class="label-date text-muted">2025-02-03</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/RManLuo/gfm-rag" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -570,11 +575,6 @@
                             <span class="model-name font-mono fw-medium">KGP</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/YuWVandy/KG-LLM-MDQA" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">42.22</span></td>
                     <td><span class="number fw-medium text-primary">60.68</span></td>
                     <td><span class="number fw-medium text-primary">52.07</span></td>
@@ -586,6 +586,11 @@
                     <td><span class="number fw-medium text-primary">46.03%</span></td>
                     <td><span class="number fw-medium text-primary">89.38s</span></td>
                     <td><span class="label-date text-muted">2023-12-25</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/YuWVandy/KG-LLM-MDQA" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -600,11 +605,6 @@
                             <span class="model-name font-mono fw-medium">ToG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/GasolSun36/ToG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">44.01</span></td>
                     <td><span class="number fw-medium text-primary">62.26</span></td>
                     <td><span class="number fw-medium text-primary">51.73</span></td>
@@ -616,6 +616,11 @@
                     <td><span class="number fw-medium text-primary">89.95%</span></td>
                     <td><span class="number fw-medium text-primary">70.53s</span></td>
                     <td><span class="label-date text-muted">2024-03-24</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/GasolSun36/ToG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -630,11 +635,6 @@
                             <span class="model-name font-mono fw-medium">LightRAG</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">43.81</span></td>
                     <td><span class="number fw-medium text-primary">63.45</span></td>
                     <td><span class="number fw-medium text-primary">52.30</span></td>
@@ -646,6 +646,11 @@
                     <td><span class="number fw-medium text-primary">69.71%</span></td>
                     <td><span class="number fw-medium text-primary">13.95s</span></td>
                     <td><span class="label-date text-muted">2025-04-28</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -660,11 +665,6 @@
                             <span class="model-name font-mono fw-medium">G-Retriever</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/XiaoxinHe/G-Retriever" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">43.66</span></td>
                     <td><span class="number fw-medium text-primary">60.21</span></td>
                     <td><span class="number fw-medium text-primary">53.46</span></td>
@@ -676,6 +676,11 @@
                     <td><span class="number fw-medium text-primary">89.95%</span></td>
                     <td><span class="number fw-medium text-primary">23.77s</span></td>
                     <td><span class="label-date text-muted">2024-05-27</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/XiaoxinHe/G-Retriever" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
                 </tr>
                 
                 <tr
@@ -690,11 +695,6 @@
                             <span class="model-name font-mono fw-medium">DALK</span>
                         </div>
                     </td>
-                    <td class="centered-text text-center">
-                        
-                            <a href="https://github.com/David-Li0406/DALK" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        
-                    </td>
                     <td><span class="number fw-medium text-primary">42.12</span></td>
                     <td><span class="number fw-medium text-primary">58.23</span></td>
                     <td><span class="number fw-medium text-primary">50.35</span></td>
@@ -706,6 +706,228 @@
                     <td><span class="number fw-medium text-primary">89.49%</span></td>
                     <td><span class="number fw-medium text-primary">26.80s</span></td>
                     <td><span class="label-date text-muted">2024-10-17</span></td>
+                    <td class="centered-text text-center">
+                        
+                            <a href="https://github.com/David-Li0406/DALK" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                        
+                    </td>
+                </tr>
+                
+                <tr class="no-results">
+                    <td colspan="13" class="text-center">
+                        No entries match the selected filters. Try adjusting your filters.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <div class="tabcontent" id="leaderboard-WithoutRAG">
+    <div class="table-responsive">
+        <table class="table scrollable data-table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Average</th>
+                    <th>Reasoning</th>
+                    <th>TF</th>
+                    <th>MC</th>
+                    <th>MS</th>
+                    <th>FB</th>
+                    <th>OE</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">RAPTOR</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">45.53</span></td>
+                    <td><span class="number fw-medium text-primary">10,142,221</span></td>
+                    <td><span class="number fw-medium text-primary">62.90</span></td>
+                    <td><span class="number fw-medium text-primary">52.07</span></td>
+                    <td><span class="number fw-medium text-primary">49.10</span></td>
+                    <td><span class="number fw-medium text-primary">57.86</span></td>
+                    <td><span class="number fw-medium text-primary">13.57</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">HippoRAG</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">44.55</span></td>
+                    <td><span class="number fw-medium text-primary">33,006,198</span></td>
+                    <td><span class="number fw-medium text-primary">63.61</span></td>
+                    <td><span class="number fw-medium text-primary">52.30</span></td>
+                    <td><span class="number fw-medium text-primary">47.52</span></td>
+                    <td><span class="number fw-medium text-primary">50.48</span></td>
+                    <td><span class="number fw-medium text-primary">12.36</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">GraphRAG(Microsoft)</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">43.30</span></td>
+                    <td><span class="number fw-medium text-primary">79,929,698</span></td>
+                    <td><span class="number fw-medium text-primary">60.13</span></td>
+                    <td><span class="number fw-medium text-primary">52.42</span></td>
+                    <td><span class="number fw-medium text-primary">45.72</span></td>
+                    <td><span class="number fw-medium text-primary">55.24</span></td>
+                    <td><span class="number fw-medium text-primary">10.50</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">GFM-RAG</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">44.30</span></td>
+                    <td><span class="number fw-medium text-primary">32,766,094</span></td>
+                    <td><span class="number fw-medium text-primary">63.69</span></td>
+                    <td><span class="number fw-medium text-primary">52.07</span></td>
+                    <td><span class="number fw-medium text-primary">45.50</span></td>
+                    <td><span class="number fw-medium text-primary">54.76</span></td>
+                    <td><span class="number fw-medium text-primary">10.69</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">KGP</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">42.22</span></td>
+                    <td><span class="number fw-medium text-primary">15,271,633</span></td>
+                    <td><span class="number fw-medium text-primary">60.68</span></td>
+                    <td><span class="number fw-medium text-primary">52.07</span></td>
+                    <td><span class="number fw-medium text-primary">44.37</span></td>
+                    <td><span class="number fw-medium text-primary">49.29</span></td>
+                    <td><span class="number fw-medium text-primary">8.92</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">ToG</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">44.01</span></td>
+                    <td><span class="number fw-medium text-primary">33,008,230</span></td>
+                    <td><span class="number fw-medium text-primary">62.26</span></td>
+                    <td><span class="number fw-medium text-primary">51.73</span></td>
+                    <td><span class="number fw-medium text-primary">45.72</span></td>
+                    <td><span class="number fw-medium text-primary">53.10</span></td>
+                    <td><span class="number fw-medium text-primary">12.08</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">LightRAG</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">43.81</span></td>
+                    <td><span class="number fw-medium text-primary">83,909,073</span></td>
+                    <td><span class="number fw-medium text-primary">63.45</span></td>
+                    <td><span class="number fw-medium text-primary">52.30</span></td>
+                    <td><span class="number fw-medium text-primary">49.10</span></td>
+                    <td><span class="number fw-medium text-primary">47.86</span></td>
+                    <td><span class="number fw-medium text-primary">10.13</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">G-Retriever</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">43.66</span></td>
+                    <td><span class="number fw-medium text-primary">32,948,161</span></td>
+                    <td><span class="number fw-medium text-primary">60.21</span></td>
+                    <td><span class="number fw-medium text-primary">53.46</span></td>
+                    <td><span class="number fw-medium text-primary">48.20</span></td>
+                    <td><span class="number fw-medium text-primary">55.00</span></td>
+                    <td><span class="number fw-medium text-primary">10.04</span></td>
+                </tr>
+                
+                <tr
+                    data-graphrag="true"
+                    data-tags="graphrag"
+                >
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <div class="model-badges">
+                                
+                            </div>
+                            <span class="model-name font-mono fw-medium">DALK</span>
+                        </div>
+                    </td>
+                    <td><span class="number fw-medium text-primary">42.12</span></td>
+                    <td><span class="number fw-medium text-primary">33,007,324</span></td>
+                    <td><span class="number fw-medium text-primary">58.23</span></td>
+                    <td><span class="number fw-medium text-primary">50.35</span></td>
+                    <td><span class="number fw-medium text-primary">46.40</span></td>
+                    <td><span class="number fw-medium text-primary">55.24</span></td>
+                    <td><span class="number fw-medium text-primary">9.67</span></td>
                 </tr>
                 
                 <tr class="no-results">
