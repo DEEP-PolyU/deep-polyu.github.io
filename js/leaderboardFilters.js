@@ -1,5 +1,5 @@
 // Global active filters set
-const activeFilters = new Set(['graphrag']);
+const activeFilters = new Set(['gptmini']);
 
 // Table Update Logic
 function updateTable() {
