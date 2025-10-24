@@ -323,8 +323,8 @@ button:focus,
 }
 
 /* Column sizing for tables */
-.table th:first-child,
-.table td:first-child {
+.table th:nth-child(2)
+.table td:nth-child(2) {
   width: 40%;
   min-width: 180px;
   max-width: 350px;
@@ -332,8 +332,8 @@ button:focus,
   word-wrap: break-word;
 }
 
-.table th:not(:first-child),
-.table td:not(:first-child) {
+.table th:not(:nth-child(2)),
+.table td:not(:nth-child(2)) {
   width: 1%;
   white-space: nowrap;
 }
@@ -581,8 +581,8 @@ button:focus,
   }
   
   /* Ensure first column doesn't take too much space on desktop */
-  .table th:first-child,
-  .table td:first-child {
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
     max-width: 40%;
   }
 }

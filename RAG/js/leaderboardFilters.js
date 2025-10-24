@@ -10,7 +10,6 @@ function updateTable() {
     leaderboards.forEach(leaderboard => {
         // Only process visible leaderboard
         if (leaderboard.style.display !== 'block') return;
-        
         const tableRows = leaderboard.querySelectorAll('.data-table tbody tr');
         let visibleRowCount = 0;
         
@@ -183,7 +182,6 @@ updateTable = function() {
     const leaderboards = document.querySelectorAll('.tabcontent');
     const noResultsMessage = document.querySelector('#no-results');
     let anyVisible = false;
-
     leaderboards.forEach(leaderboard => {
         // Only process visible leaderboard
         if (leaderboard.style.display !== 'block') return;
@@ -213,6 +211,11 @@ updateTable = function() {
 
             // Toggle row visibility
             row.style.display = showRow ? '' : 'none';
+            // 更新序号单元格的内容
+            const rankCell = row.querySelector('td:first-child .number');
+            if (rankCell) {
+                rankCell.textContent = visibleRowCount + 1; // 从1开始显示
+            }
             if (showRow) visibleRowCount++;
         });
 
