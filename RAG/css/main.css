@@ -15,3 +15,50 @@
 
 /* Leaderboard filters */
 @import 'leaderboard-filters.css';
+
+/* Sorting styles */
+.sortable-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
+}
+
+.sortable-header:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sort-indicator {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sort-indicator i {
+    font-size: 12px;
+    line-height: 8px;
+}
+
+.sortable-header.sort-asc {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.sortable-header.sort-desc {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Dark mode support */
+.dark-mode .sortable-header:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .sortable-header.sort-asc,
+.dark-mode .sortable-header.sort-desc {
+    color: #4dabf7;
+}
