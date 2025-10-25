@@ -1,0 +1,540 @@
+{
+	"leaderboards": [{
+			"name": "Accuracy",
+			"results": [{
+					"name": "RAPTOR",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/parthsarthi03/raptor",
+					"date": "2025-01-31",
+					"Fillinblank": 76.67,
+					"Multichoice": 80.65,
+					"Multiselect": 77.48,
+					"Trueorfalse": 82.28,
+					"Openended": 54.83,
+					"Average": 73.58,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "10,142,221",
+					"Timecost": "347m27s",
+					"Organization": "-",
+					"retrievaltime": "0.02s"
+				},
+				{
+					"name": "HippoRAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/markmbain/OSU-NLP-Group-HippoRAG",
+					"date": "2024-12-19",
+					"Fillinblank": 70.48,
+					"Multichoice": 80.18,
+					"Multiselect": 74.32,
+					"Trueorfalse": 81.65,
+					"Openended": 56.13,
+					"Average": 72.64,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,006,198",
+					"Timecost": "162m26s",
+					"Organization": "89.58%",
+					"retrievaltime": "2.44s"
+				},
+				{
+					"name": "GraphRAG(Microsoft)",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/microsoft/graphrag",
+					"date": "2025-02-19",
+					"Fillinblank": 75.24,
+					"Multichoice": 81.57,
+					"Multiselect": 77.48,
+					"Trueorfalse": 80.70,
+					"Openended": 52.42,
+					"Average": 72.50,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "79,929,698",
+					"Timecost": "216m17s",
+					"Organization": "72.51%",
+					"retrievaltime": "44.87s"
+				},
+				{
+					"name": "GFM-RAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/RManLuo/gfm-rag",
+					"date": "2025-02-03",
+					"Fillinblank": 72.38,
+					"Multichoice": 80.65,
+					"Multiselect": 72.07,
+					"Trueorfalse": 82.59,
+					"Openended": 52.79,
+					"Average": 72.10,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "32,766,094",
+					"Timecost": "95m24s",
+					"Organization": "89.97%",
+					"retrievaltime": "1.96s"
+				},
+				{
+					"name": "KGP",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/YuWVandy/KG-LLM-MDQA",
+					"date": "2023-12-25",
+					"Fillinblank": 74.29,
+					"Multichoice": 79.26,
+					"Multiselect": 74.77,
+					"Trueorfalse": 82.28,
+					"Openended": 51.49,
+					"Average": 71.86,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "15,271,633",
+					"Timecost": "292m2s",
+					"Organization": "46.03%",
+					"retrievaltime": "89.38s"
+				},
+				{
+					"name": "TF-IDF",
+					"graphrag": false,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://python.langchain.com/docs/integrations/retrievers/tf_idf/",
+					"date": "",
+					"Fillinblank": 75.71,
+					"Multichoice": 77.88,
+					"Multiselect": 72.52,
+					"Trueorfalse": 84.17,
+					"Openended": 50.18,
+					"Average": 71.71,
+					"tags": [
+						"rag"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "ToG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/GasolSun36/ToG",
+					"date": "2024-03-24",
+					"Fillinblank": 70.48,
+					"Multichoice": 78.80,
+					"Multiselect": 78.38,
+					"Trueorfalse": 79.75,
+					"Openended": 54.28,
+					"Average": 71.71,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,008,230",
+					"Timecost": "105m15s",
+					"Organization": "89.95%",
+					"retrievaltime": "70.53s"
+				},
+				{
+					"name": "BM-25",
+					"graphrag": false,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://python.langchain.com/docs/integrations/retrievers/bm25/",
+					"date": "",
+					"Fillinblank": 74.28,
+					"Multichoice": 78.80,
+					"Multiselect": 71.17,
+					"Trueorfalse": 84.49,
+					"Openended": 50.00,
+					"Average": 71.66,
+					"tags": [
+						"rag"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "LightRAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/HKUDS/LightRAG",
+					"date": "2025-04-28",
+					"Fillinblank": 65.24,
+					"Multichoice": 78.80,
+					"Multiselect": 73.42,
+					"Trueorfalse": 82.59,
+					"Openended": 53.16,
+					"Average": 71.22,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "83,909,073",
+					"Timecost": "240m6s",
+					"Organization": "69.71%",
+					"retrievaltime": "13.95s"
+				},
+				{
+					"name": "GPT-4o-mini",
+					"graphrag": false,
+					"rag": false,
+					"gptmini": true,
+					"site": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+					"date": "",
+					"Fillinblank": 74.29,
+					"Multichoice": 81.11,
+					"Multiselect": 76.68,
+					"Trueorfalse": 75.95,
+					"Openended": 52.23,
+					"Average": 70.68,
+					"tags": [
+						"LLM only"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "G-Retriever",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/XiaoxinHe/G-Retriever",
+					"date": "2024-05-27",
+					"Fillinblank": 70.95,
+					"Multichoice": 77.42,
+					"Multiselect": 71.62,
+					"Trueorfalse": 78.80,
+					"Openended": 52.04,
+					"Average": 69.84,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "32,948,161",
+					"Timecost": "103m55s",
+					"Organization": "89.95%",
+					"retrievaltime": "23.77s"
+				},
+				{
+					"name": "DALK",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/David-Li0406/DALK",
+					"date": "2024-10-17",
+					"Fillinblank": 70.00,
+					"Multichoice": 78.34,
+					"Multiselect": 71.62,
+					"Trueorfalse": 77.22,
+					"Openended": 51.49,
+					"Average": 69.30,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,007,324",
+					"Timecost": "84m41s",
+					"Organization": "89.49%",
+					"retrievaltime": "26.80s"
+				}
+			]
+		},
+		{
+			"name": "Reasoning",
+			"results": [
+
+
+				{
+					"name": "RAPTOR",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/parthsarthi03/raptor",
+					"date": "2025-01-31",
+					"Fillinblank": 57.86,
+					"Multichoice": 52.07,
+					"Multiselect": 49.10,
+					"Trueorfalse": 62.90,
+					"Openended": 13.57,
+					"Average": 45.53,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "10,142,221",
+					"Timecost": "347m27s",
+					"Organization": "-",
+					"retrievaltime": "0.02s"
+				},
+				{
+					"name": "HippoRAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/markmbain/OSU-NLP-Group-HippoRAG",
+					"date": "2024-12-19",
+					"Fillinblank": 50.48,
+					"Multichoice": 52.30,
+					"Multiselect": 47.52,
+					"Trueorfalse": 63.61,
+					"Openended": 12.36,
+					"Average": 44.55,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,006,198",
+					"Timecost": "162m26s",
+					"Organization": "89.58%",
+					"retrievaltime": "2.44s"
+				},
+				{
+					"name": "GFM-RAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/RManLuo/gfm-rag",
+					"date": "2025-02-03",
+					"Fillinblank": 54.76,
+					"Multichoice": 52.07,
+					"Multiselect": 45.50,
+					"Trueorfalse": 63.69,
+					"Openended": 10.69,
+					"Average": 44.30,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "32,766,094",
+					"Timecost": "95m24s",
+					"Organization": "89.97%",
+					"retrievaltime": "1.96s"
+				},
+				{
+					"name": "BM-25",
+					"graphrag": false,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://python.langchain.com/docs/integrations/retrievers/bm25/",
+					"date": "",
+					"Fillinblank": 56.42,
+					"Multichoice": 53.11,
+					"Multiselect": 42.79,
+					"Trueorfalse": 62.18,
+					"Openended": 11.52,
+					"Average": 44.15,
+					"tags": [
+						"rag"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "ToG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/GasolSun36/ToG",
+					"date": "2024-03-24",
+					"Fillinblank": 53.10,
+					"Multichoice": 51.73,
+					"Multiselect": 45.72,
+					"Trueorfalse": 62.26,
+					"Openended": 12.08,
+					"Average": 44.01,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,008,230",
+					"Timecost": "105m15s",
+					"Organization": "89.95%",
+					"retrievaltime": "70.53s"
+				},
+				{
+					"name": "LightRAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/HKUDS/LightRAG",
+					"date": "2025-04-28",
+					"Fillinblank": 47.86,
+					"Multichoice": 52.30,
+					"Multiselect": 49.10,
+					"Trueorfalse": 63.45,
+					"Openended": 10.13,
+					"Average": 43.81,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "83,909,073",
+					"Timecost": "240m6s",
+					"Organization": "69.71%",
+					"retrievaltime": "13.95s"
+				},
+				{
+					"name": "G-Retriever",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/XiaoxinHe/G-Retriever",
+					"date": "2024-05-27",
+					"Fillinblank": 55.00,
+					"Multichoice": 53.46,
+					"Multiselect": 48.20,
+					"Trueorfalse": 60.21,
+					"Openended": 10.04,
+					"Average": 43.66,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "32,948,161",
+					"Timecost": "103m55s",
+					"Organization": "89.95%",
+					"retrievaltime": "23.77s"
+				},
+				{
+					"name": "GraphRAG(Microsoft)",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/microsoft/graphrag",
+					"date": "2025-02-19",
+					"Fillinblank": 55.24,
+					"Multichoice": 52.42,
+					"Multiselect": 45.72,
+					"Trueorfalse": 60.13,
+					"Openended": 10.50,
+					"Average": 43.30,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "79,929,698",
+					"Timecost": "216m17s",
+					"Organization": "72.51%",
+					"retrievaltime": "44.87s"
+				},
+				{
+					"name": "TF-IDF",
+					"graphrag": false,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://python.langchain.com/docs/integrations/retrievers/tf_idf/",
+					"date": "",
+					"Fillinblank": 52.61,
+					"Multichoice": 49.19,
+					"Multiselect": 43.02,
+					"Trueorfalse": 61.23,
+					"Openended": 10.50,
+					"Average": 42.38,
+					"tags": [
+						"rag"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "KGP",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/YuWVandy/KG-LLM-MDQA",
+					"date": "2023-12-25",
+					"Fillinblank": 49.29,
+					"Multichoice": 52.07,
+					"Multiselect": 44.37,
+					"Trueorfalse": 60.68,
+					"Openended": 8.92,
+					"Average": 42.22,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "15,271,633",
+					"Timecost": "292m2s",
+					"Organization": "46.03%",
+					"retrievaltime": "89.38s"
+				},
+
+
+				{
+					"name": "DALK",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://github.com/David-Li0406/DALK",
+					"date": "2024-10-17",
+					"Fillinblank": 55.24,
+					"Multichoice": 50.35,
+					"Multiselect": 46.40,
+					"Trueorfalse": 58.23,
+					"Openended": 9.67,
+					"Average": 42.12,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "33,007,324",
+					"Timecost": "84m41s",
+					"Organization": "89.49%",
+					"retrievaltime": "26.80s"
+				}, {
+					"name": "GPT-4o-mini",
+					"graphrag": false,
+					"rag": false,
+					"gptmini": true,
+					"site": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+					"date": "",
+					"Fillinblank": 53.33,
+					"Multichoice": 50.92,
+					"Multiselect": 39.19,
+					"Trueorfalse": 53.40,
+					"Openended": 9.76,
+					"Average": 39.78,
+					"tags": [
+						"LLM only"
+					],
+					"Tokencost": "-",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				}
+			]
+		},
+		{
+			"name": "WithoutRAG",
+			"results": [{
+				"name": "GPT-4o-mini",
+				"graphrag": false,
+				"rag": false,
+				"gptmini": true,
+				"site": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+				"date": "",
+				"AverageAccuracy": 70.68,
+				"AverageReasoning": 39.78,
+				"Fillinblank": 53.33,
+				"Multichoice": 50.92,
+				"Multiselect": 39.19,
+				"Trueorfalse": 53.40,
+				"Openended": 9.76,
+				"tags": [
+					"LLM only"
+				]
+			}]
+		}
+	]
+}
