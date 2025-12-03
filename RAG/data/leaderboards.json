@@ -252,6 +252,48 @@
 					"Timecost": "84m41s",
 					"Organization": "89.49%",
 					"retrievaltime": "26.80s"
+				},
+				{
+					"name": "LAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://arxiv.org/pdf/2508.05509",
+					"date": "2025-08-07",
+					"Fillinblank": 77.02,
+					"Multichoice": 78.34,
+					"Multiselect": 77.02,
+					"Trueorfalse": 84.78,
+					"Openended": 56.55,
+					"Average": 74.21,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "0",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "-"
+				},
+				{
+					"name": "LinearRAG",
+					"graphrag": true,
+					"rag": true,
+					"gptmini": true,
+					"site": "https://arxiv.org/pdf/2510.10114",
+					"date": "2025-10-11",
+					"Fillinblank": 71.90,
+					"Multichoice": 82.03,
+					"Multiselect": 80.18,
+					"Trueorfalse": 84.49,
+					"Openended": 55.02,
+					"Average": 74.41,
+					"tags": [
+						"graphrag", "rag"
+					],
+					"Tokencost": "0",
+					"Timecost": "-",
+					"Organization": "-",
+					"retrievaltime": "0.093s"
 				}
 			]
 		},
