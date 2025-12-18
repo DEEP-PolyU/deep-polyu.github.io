@@ -121,8 +121,17 @@ function renderTable(tableType, data, columns) {
                 
                 const modelName = document.createElement('span');
                 modelName.className = 'model-name font-mono fw-medium';
-                modelName.textContent = item[column];
-                
+                //modelName.textContent = item[column];
+                if(item['site']){
+					const link = document.createElement('a');
+                    link.href = item['site'];
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+					link.textContent = item[column];
+					modelName.appendChild(link)
+				}else{
+					modelName.textContent = item[column];
+				}
                 modelDiv.appendChild(modelName);
                 cell.appendChild(modelDiv);
             } else if (column === 'site') {
